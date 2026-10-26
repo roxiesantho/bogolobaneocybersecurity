@@ -1,465 +1,215 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-ZA">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bogolo ba Neo | Cybersecurity Solutions</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-background:#050816;
-color:white;
-font-family:'Inter',sans-serif;
-overflow-x:hidden;
-}
-
-header{
-position:fixed;
-width:100%;
-top:0;
-left:0;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(10px);
-z-index:1000;
-border-bottom:1px solid rgba(0,255,247,0.1);
-}
-
-.logo{
-font-family:'Orbitron',sans-serif;
-font-size:28px;
-font-weight:bold;
-color:#00fff7;
-text-shadow:0 0 10px #00fff7;
-}
-
-nav a{
-margin-left:25px;
-text-decoration:none;
-color:white;
-transition:0.3s;
-font-size:15px;
-}
-
-nav a:hover{
-color:#00fff7;
-}
-
-.hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 8%;
-background:
-linear-gradient(rgba(5,8,22,0.85), rgba(5,8,22,0.95)),
-url('https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=1600&auto=format&fit=crop');
-background-size:cover;
-background-position:center;
-}
-
-.hero-text{
-max-width:650px;
-}
-
-.hero-text h1{
-font-size:72px;
-line-height:1.1;
-font-family:'Orbitron',sans-serif;
-margin-bottom:20px;
-}
-
-.hero-text span{
-color:#00fff7;
-text-shadow:0 0 20px #00fff7;
-}
-
-.hero-text p{
-font-size:18px;
-opacity:0.9;
-margin-bottom:35px;
-line-height:1.8;
-}
-
-.buttons{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:15px 30px;
-border-radius:10px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-}
-
-.primary{
-background:#00fff7;
-color:black;
-}
-
-.secondary{
-border:1px solid #00fff7;
-color:#00fff7;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-box-shadow:0 0 20px rgba(0,255,247,0.4);
-}
-
-section{
-padding:100px 8%;
-}
-
-.section-title{
-font-size:42px;
-margin-bottom:50px;
-font-family:'Orbitron',sans-serif;
-text-align:center;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:#0c1227;
-padding:35px;
-border-radius:20px;
-border:1px solid rgba(0,255,247,0.1);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-border-color:#00fff7;
-box-shadow:0 0 25px rgba(0,255,247,0.15);
-}
-
-.card h3{
-margin:20px 0;
-color:#00fff7;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.stat{
-background:#0b1020;
-padding:40px;
-border-radius:18px;
-text-align:center;
-}
-
-.stat h2{
-font-size:48px;
-color:#00fff7;
-margin-bottom:10px;
-}
-
-.pricing{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-.price-card{
-background:#0c1227;
-padding:40px;
-border-radius:20px;
-border:1px solid rgba(0,255,247,0.1);
-}
-
-.price-card h3{
-color:#00fff7;
-margin-bottom:15px;
-}
-
-.price{
-font-size:42px;
-margin-bottom:20px;
-}
-
-.price-card ul{
-list-style:none;
-margin-bottom:30px;
-}
-
-.price-card li{
-margin-bottom:12px;
-opacity:0.9;
-}
-
-.contact-box{
-background:#0b1020;
-padding:50px;
-border-radius:25px;
-max-width:900px;
-margin:auto;
-}
-
-form{
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-input, textarea{
-padding:16px;
-background:#151c35;
-border:none;
-border-radius:10px;
-color:white;
-}
-
-button{
-padding:16px;
-border:none;
-background:#00fff7;
-color:black;
-font-weight:bold;
-border-radius:10px;
-cursor:pointer;
-}
-
-footer{
-padding:30px;
-text-align:center;
-background:black;
-opacity:0.8;
-}
-
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
-}
-
-@media(max-width:900px){
-
-.hero{
-flex-direction:column;
-justify-content:center;
-text-align:center;
-padding-top:120px;
-}
-
-.hero-text h1{
-font-size:48px;
-}
-
-nav{
-display:none;
-}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06182b">
+  <meta name="description" content="Bogolo Ba Neo Cybersecurity Solutions helps South African businesses assess cyber risks, strengthen security controls and build practical resilience.">
+  <title>Bogolo Ba Neo Cybersecurity Solutions | Protect • Secure • Empower</title>
+  <style>
+    :root{--navy:#06182b;--navy2:#0b2944;--cyan:#00bedc;--teal:#20c9b0;--ink:#182a3a;--muted:#5b6b7a;--pale:#eefaff;--white:#fff;--line:#d9e8ef}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+    a{color:inherit} .wrap{width:min(1120px,92%);margin:auto}
+    header{background:rgba(6,24,43,.97);color:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(0,190,220,.35)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;letter-spacing:.04em}
+    .brand img{width:68px;height:58px;object-fit:contain;background:#fff;border-radius:8px}
+    .brand span{font-size:.95rem;line-height:1.2}.brand small{display:block;color:var(--cyan);font-size:.68rem;letter-spacing:.16em;margin-top:4px}
+    nav{display:flex;gap:20px;align-items:center;flex-wrap:wrap}nav a{text-decoration:none;font-size:.9rem;color:#eaf7ff}nav a:hover{color:var(--cyan)}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:12px 18px;border-radius:9px;text-decoration:none;font-weight:800;border:1px solid transparent;transition:.2s}
+    .btn.primary{background:var(--cyan);color:var(--navy)}.btn.primary:hover{background:#70e8f7;transform:translateY(-1px)}
+    .btn.outline{border-color:var(--cyan);color:#fff}.btn.outline:hover{background:rgba(0,190,220,.12)}
+    .hero{background:radial-gradient(circle at 78% 20%,#114568 0,transparent 36%),linear-gradient(130deg,var(--navy),#09253d 65%,#06182b);color:#fff;padding:76px 0 68px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:42px;align-items:center}
+    .eyebrow{color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:.18em;font-size:.78rem}
+    h1{font-size:clamp(2.3rem,5vw,4.35rem);line-height:1.05;letter-spacing:-.04em;margin:15px 0 18px}
+    h1 em{font-style:normal;color:var(--cyan)}.hero p{font-size:1.12rem;color:#d5e7f2;max-width:650px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.hero-logo{background:rgba(255,255,255,.96);border:1px solid rgba(0,190,220,.55);border-radius:24px;padding:14px;box-shadow:0 20px 65px rgba(0,190,220,.14)}
+    .hero-logo img{width:100%;display:block;border-radius:12px}
+    .trustline{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;color:#c5e0ec;font-size:.88rem}.trustline span:before{content:"✓";color:var(--teal);font-weight:900;margin-right:8px}
+    section{padding:66px 0}.section-head{max-width:720px;margin-bottom:28px}.section-head h2{font-size:clamp(1.8rem,3.4vw,2.65rem);line-height:1.15;color:var(--navy);margin:8px 0 12px;letter-spacing:-.025em}.section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{border:1px solid var(--line);border-radius:15px;padding:22px;background:#fff;box-shadow:0 8px 26px rgba(6,24,43,.04)}
+    .card:hover{border-color:#83ddeb;box-shadow:0 12px 30px rgba(6,24,43,.08)}.icon{width:43px;height:43px;border-radius:12px;background:var(--pale);display:grid;place-items:center;color:#008ba7;font-size:1.35rem;margin-bottom:13px}
+    h3{color:var(--navy);margin:0 0 8px;font-size:1.08rem}.card p{color:var(--muted);font-size:.94rem;margin:0}
+    .band{background:var(--pale)}.split{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:start}
+    .problem-list{display:grid;gap:12px}.problem{display:flex;gap:12px;padding:14px;background:#fff;border:1px solid var(--line);border-radius:12px}.problem b{display:block;color:var(--navy)}.problem small{color:var(--muted);font-size:.9rem}
+    .checks{list-style:none;padding:0;margin:20px 0}.checks li{margin:10px 0;padding-left:27px;position:relative}.checks li:before{content:"✓";position:absolute;left:0;top:0;color:#009b91;font-weight:900}
+    .price-note{color:var(--muted);font-size:.9rem;margin-top:-12px;margin-bottom:24px}
+    .price-card{display:flex;flex-direction:column;min-height:100%;position:relative}.price{font-size:1.75rem;color:#008ca6;font-weight:900;letter-spacing:-.03em;margin:10px 0}.price small{font-size:.8rem;color:var(--muted);font-weight:600;letter-spacing:0}
+    .price-card ul{padding-left:18px;color:var(--muted);font-size:.9rem;flex:1}.price-card li{margin:5px 0}.scope{font-size:.8rem;background:#f4f9fb;border-radius:8px;padding:10px;color:#536777;margin:6px 0 15px}
+    .retainers{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.retainer{border-radius:16px;padding:24px;background:var(--navy);color:#fff;border:1px solid #123b58}.retainer.featured{border:2px solid var(--cyan);transform:translateY(-5px)}.retainer h3{color:#fff}.retainer .price{color:var(--cyan)}.retainer p,.retainer li{color:#d0e2ed;font-size:.9rem}.retainer ul{padding-left:18px}.retainer .btn{width:100%;margin-top:12px}
+    .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{padding:17px;border-top:3px solid var(--cyan);background:#f5fbfd;border-radius:0 0 12px 12px}.step strong{display:block;color:var(--navy);margin-bottom:5px}.step p{font-size:.88rem;color:var(--muted);margin:0}
+    .cta{background:linear-gradient(125deg,#06182b,#0c3654);color:#fff;border-radius:20px;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:24px}.cta h2{color:#fff;margin:0 0 8px;font-size:2rem}.cta p{margin:0;color:#d1e4ef}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px}.contact-box{background:var(--navy);color:#fff;border-radius:16px;padding:25px}.contact-box h3{color:#fff}.contact-item{margin:16px 0;color:#d6e8f1}.contact-item a{color:var(--cyan);text-decoration:none}.contact-form{border:1px solid var(--line);border-radius:16px;padding:25px}.field{margin-bottom:13px}.field label{display:block;font-weight:700;font-size:.88rem;margin-bottom:5px}.field input,.field textarea,.field select{width:100%;padding:12px;border:1px solid #cbdce5;border-radius:8px;font:inherit}.field textarea{min-height:105px;resize:vertical}.form-help{font-size:.8rem;color:var(--muted)}
+    footer{background:#03111e;color:#bcd0dd;padding:26px 0;font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{color:#fff}.foot a{color:var(--cyan);text-decoration:none}
+    .notice{font-size:.84rem;color:var(--muted);margin-top:20px}.mobile-cta{display:none}
+    @media(max-width:850px){nav{gap:10px}nav a{font-size:.82rem}.hero-grid,.split,.contact-grid{grid-template-columns:1fr}.hero-logo{max-width:390px}.cards{grid-template-columns:repeat(2,1fr)}.retainers{grid-template-columns:1fr}.retainer.featured{transform:none}.steps{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.nav{align-items:flex-start}.brand img{width:52px;height:48px}nav{justify-content:flex-end;max-width:180px}nav a:not(.nav-cta){display:none}.hero{padding:54px 0}.hero-grid{gap:28px}.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.cta{padding:25px;display:block}.cta .btn{margin-top:18px;width:100%}section{padding:48px 0}.mobile-cta{display:flex;position:fixed;bottom:10px;left:10px;right:10px;z-index:20;gap:8px}.mobile-cta .btn{flex:1;box-shadow:0 4px 20px #0003}footer{padding-bottom:90px}}
+  </style>
 </head>
-
 <body>
-
 <header>
-<div class="logo">BOGOLO BA NEO</div>
-
-<nav>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#pricing">Pricing</a>
-<a href="#contact">Contact</a>
-</nav>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Bogolo Ba Neo home">
+      <img src="logo.jpeg" alt="Bogolo Ba Neo Cybersecurity Solutions logo">
+      <span>BOGOLO BA NEO<small>CYBERSECURITY SOLUTIONS</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#services">Services</a><a href="#about">About</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a>
+      <a class="btn primary nav-cta" href="#contact">Get a quote</a>
+    </nav>
+  </div>
 </header>
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Protect · Secure · Empower</div>
+        <h1>Cybersecurity that makes your business <em>stronger.</em></h1>
+        <p>Practical, business-focused cybersecurity and secure technology support for South African organisations. Understand your risks, prioritise what matters and take action—without unnecessary complexity.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://wa.me/27825120368?text=Hi%20Bogolo%20Ba%20Neo%2C%20I%27d%20like%20to%20discuss%20cybersecurity%20support." target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+          <a class="btn outline" href="#services">Explore services</a>
+        </div>
+        <div class="trustline"><span>Clear scopes and deliverables</span><span>Once-off or monthly support</span><span>Authorised, responsible testing</span></div>
+      </div>
+      <div class="hero-logo"><img src="logo.jpeg" alt="Bogolo Ba Neo Cybersecurity Solutions — Protect Secure Empower"></div>
+    </div>
+  </section>
 
-<section class="hero">
+  <section id="about">
+    <div class="wrap split">
+      <div class="section-head">
+        <div class="eyebrow">Who we are</div>
+        <h2>Security advice you can actually put to work.</h2>
+        <p>Bogolo Ba Neo Cybersecurity Solutions is a South African cybersecurity business helping small and medium-sized organisations identify cyber risks, strengthen digital environments and build practical security habits. Our approach is proportionate, clear and focused on business impact.</p>
+        <ul class="checks">
+          <li>Recommendations prioritised by risk and business impact.</li>
+          <li>Transparent pricing, defined scope and documented deliverables.</li>
+          <li>Flexible support for one-off projects or ongoing monthly needs.</li>
+          <li>Confidentiality and written authorisation are central to our work.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-head"><div class="eyebrow">Problems we help solve</div><h2>Reduce avoidable risk.</h2></div>
+        <div class="problem-list">
+          <div class="problem"><div class="icon">⌁</div><div><b>Insecure accounts and email</b><small>Weak passwords, missing multi-factor authentication and excessive access.</small></div></div>
+          <div class="problem"><div class="icon">⌕</div><div><b>Unknown vulnerabilities</b><small>Limited visibility into network, endpoint and configuration weaknesses.</small></div></div>
+          <div class="problem"><div class="icon">▤</div><div><b>Policy and staff-awareness gaps</b><small>Unclear processes for phishing, data handling and incident reporting.</small></div></div>
+          <div class="problem"><div class="icon">◈</div><div><b>Unprepared response</b><small>No clear first steps, roles or records when a security incident happens.</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="hero-text">
-<h1>Elite <span>Cybersecurity</span> For Modern Businesses</h1>
+  <section class="band" id="services">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">What we do</div><h2>Cybersecurity services built around your needs.</h2><p>Start with a focused assessment, implement agreed improvements, or arrange regular advisory support.</p></div>
+      <div class="cards">
+        <article class="card"><div class="icon">⬡</div><h3>Cybersecurity Health Check</h3><p>Review selected security controls and receive a short report with priority actions to reduce common risks.</p></article>
+        <article class="card"><div class="icon">☁</div><h3>Microsoft 365 Security</h3><p>Review user access, MFA, tenant settings and key account protections, with a practical action list.</p></article>
+        <article class="card"><div class="icon">⌘</div><h3>Vulnerability & Network Assessment</h3><p>Identify and prioritise weaknesses across agreed systems, network devices and exposed services.</p></article>
+        <article class="card"><div class="icon">▣</div><h3>Security Hardening</h3><p>Implement approved improvements to access controls, secure configuration, endpoints and backups.</p></article>
+        <article class="card"><div class="icon">▤</div><h3>Policies, POPIA Security & Governance</h3><p>Security policies, risk registers, control-gap reviews and documentation to support better practices and readiness.</p></article>
+        <article class="card"><div class="icon">♙</div><h3>Staff Awareness Training</h3><p>Practical training on phishing, passwords, data handling and how to report suspicious activity.</p></article>
+        <article class="card"><div class="icon">⚠</div><h3>Incident Response Consultation</h3><p>Initial triage advice, containment priorities and written next steps for a suspected security incident.</p></article>
+        <article class="card"><div class="icon">◉</div><h3>CCTV, Access Control & Network Security</h3><p>Security reviews and integration support for electronic security systems and their supporting networks.</p></article>
+        <article class="card"><div class="icon">↻</div><h3>Monthly Security Advisory</h3><p>Scheduled reviews, action tracking, reporting and ongoing guidance within agreed monthly service hours.</p></article>
+      </div>
+    </div>
+  </section>
 
-<p>
-Bogolo ba Neo protects companies against cyber threats with advanced security monitoring,
-penetration testing, compliance management, and rapid incident response solutions.
-</p>
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Clear starting prices</div><h2>Once-off services</h2><p>Proposed launch prices in South African rand. Each engagement is confirmed by written quotation after scope review.</p></div>
+      <div class="cards">
+        <article class="card price-card"><h3>Cybersecurity Health Check</h3><div class="price">R1,500</div><p>A practical first look at common security risks.</p><ul><li>Review of agreed controls</li><li>Findings summary and top five priorities</li></ul><div class="scope">Scope: one small business, up to 5 endpoints. No penetration testing.</div><a class="btn primary" href="https://wa.me/27825120368?text=Please%20quote%20for%20a%20Cybersecurity%20Health%20Check." target="_blank" rel="noopener">Request quote</a></article>
+        <article class="card price-card"><h3>Microsoft 365 Security Review</h3><div class="price">R2,500</div><p>Review key tenant and account protections.</p><ul><li>MFA, access and configuration review</li><li>Prioritised action report</li></ul><div class="scope">Scope: one tenant, up to 10 users. Licences excluded.</div><a class="btn primary" href="https://wa.me/27825120368?text=Please%20quote%20for%20a%20Microsoft%20365%20Security%20Review." target="_blank" rel="noopener">Request quote</a></article>
+        <article class="card price-card"><h3>Vulnerability Assessment</h3><div class="price">R3,500</div><p>Identify and prioritise weaknesses in agreed systems.</p><ul><li>Assessment results</li><li>Validated findings and remediation roadmap</li></ul><div class="scope">Scope: up to 10 agreed IPs/endpoints. Written authorisation required.</div><a class="btn primary" href="https://wa.me/27825120368?text=Please%20quote%20for%20a%20Vulnerability%20Assessment." target="_blank" rel="noopener">Request quote</a></article>
+        <article class="card price-card"><h3>Network Security Assessment</h3><div class="price">R4,500</div><p>Review a small site's network security posture.</p><ul><li>Review of agreed network setup</li><li>Findings and risk report</li></ul><div class="scope">Scope: one site, up to 10 network devices.</div><a class="btn primary" href="https://wa.me/27825120368?text=Please%20quote%20for%20a%20Network%20Security%20Assessment." target="_blank" rel="noopener">Request quote</a></article>
+        <article class="card price-card"><h3>POPIA Security Gap Assessment</h3><div class="price">R3,500</div><p>Review selected security controls for personal-information protection.</p><ul><li>Security-controls gap report</li><li>Prioritised improvement plan</li></ul><div class="scope">Scope: one business, up to 10 staff. Not legal advice or a compliance guarantee.</div><a class="btn primary" href="https://wa.me/27825120368?text=Please%20quote%20for%20a%20POPIA%20Security%20Gap%20Assessment." target="_blank" rel="noopener">Request quote</a></article>
+        <article class="card price-card"><h3>Cybersecurity Policy Starter Pack</h3><div class="price">R4,500</div><p>Build a practical foundation for consistent security practices.</p><ul><li>Up to five tailored policies</li><li>Implementation checklist</li></ul><div class="scope">Scope: one business, up to 20 staff.</div><a class="btn primary" href="https://wa.me/27825120368?text=Please%20quote%20for%20a%20Cybersecurity%20Policy%20Starter%20Pack." target="_blank" rel="noopener">Request quote</a></article>
+        <article class="card price-card"><h3>Staff Cyber Awareness Training</h3><div class="price">R2,000</div><p>Practical training to help staff recognise common threats.</p><ul><li>One 90-minute session</li><li>Slides and attendance record</li></ul><div class="scope">Scope: up to 15 attendees. Additional sessions quoted separately.</div><a class="btn primary" href="https://wa.me/27825120368?text=Please%20quote%20for%20Staff%20Cyber%20Awareness%20Training." target="_blank" rel="noopener">Request quote</a></article>
+        <article class="card price-card"><h3>Incident Response Consultation</h3><div class="price">R1,500</div><p>Get help understanding a suspected incident and next steps.</p><ul><li>Initial consultation and triage</li><li>Written containment priorities</li></ul><div class="scope">Scope: up to 2 hours. Full investigation and recovery excluded.</div><a class="btn primary" href="https://wa.me/27825120368?text=Please%20discuss%20an%20Incident%20Response%20Consultation." target="_blank" rel="noopener">Request support</a></article>
+        <article class="card price-card"><h3>Security Hardening Project</h3><div class="price">From R3,500</div><p>Implement agreed security configuration improvements.</p><ul><li>Approved configuration changes</li><li>Change record and recommendations</li></ul><div class="scope">Final price depends on systems, access, complexity and agreed scope.</div><a class="btn primary" href="https://wa.me/27825120368?text=Please%20quote%20for%20a%20Security%20Hardening%20Project." target="_blank" rel="noopener">Request quote</a></article>
+      </div>
+      <p class="notice">Additional work beyond agreed scope: R750/hour. Extra tailored policy: R750. Extra awareness session: R2,000. Travel, hardware, software licences and third-party costs are excluded unless quoted. Prices are proposed launch prices and are subject to written quotation.</p>
+    </div>
+  </section>
 
-<div class="buttons">
-<a href="#contact" class="btn primary">Book Consultation</a>
-<a href="#services" class="btn secondary">Explore Services</a>
-</div>
+  <section class="band">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Recurring support</div><h2>Monthly cybersecurity packages</h2><p>Predictable support with clear service hours. These packages are advisory services—not 24/7 SOC monitoring.</p></div>
+      <div class="retainers">
+        <article class="retainer"><h3>Essential</h3><div class="price">R3,500 <small>/ month</small></div><p>For businesses needing regular access to practical security guidance.</p><ul><li>One monthly advisory session, up to 60 minutes</li><li>Review up to five alerts or reported concerns</li><li>Monthly recommendations summary</li><li>Up to 4 service hours per month</li></ul><a class="btn outline" href="https://wa.me/27825120368?text=Please%20tell%20me%20more%20about%20the%20Essential%20monthly%20package." target="_blank" rel="noopener">Discuss package</a></article>
+        <article class="retainer featured"><h3>Business</h3><div class="price">R5,500 <small>/ month</small></div><p>For teams that want structured reviews and action tracking.</p><ul><li>Monthly security review and risk-register updates</li><li>Microsoft 365 or endpoint security guidance</li><li>Quarterly awareness session, up to 15 attendees</li><li>Policy maintenance and monthly report</li><li>Up to 8 service hours per month</li></ul><a class="btn primary" href="https://wa.me/27825120368?text=Please%20tell%20me%20more%20about%20the%20Business%20monthly%20package." target="_blank" rel="noopener">Discuss package</a></article>
+        <article class="retainer"><h3>Managed Advisory</h3><div class="price">R9,500 <small>/ month</small></div><p>For organisations seeking regular governance and oversight.</p><ul><li>Monthly security governance meeting and report</li><li>Risk register and action tracking</li><li>Review of agreed security configurations</li><li>Policy support and quarterly awareness session</li><li>Up to 12 service hours per month</li></ul><a class="btn outline" href="https://wa.me/27825120368?text=Please%20tell%20me%20more%20about%20the%20Managed%20Advisory%20monthly%20package." target="_blank" rel="noopener">Discuss package</a></article>
+      </div>
+      <p class="notice">Monthly retainers are payable in advance. Service hours, response times, availability and exclusions are confirmed in a written service agreement. No continuous monitoring, 24/7 response or unlimited remediation is included unless separately contracted.</p>
+    </div>
+  </section>
 
-</div>
+  <section>
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">How we work</div><h2>A clear process from risk to action.</h2></div>
+      <div class="steps">
+        <div class="step"><strong>01 · Understand</strong><p>Discuss your environment, priorities and constraints.</p></div>
+        <div class="step"><strong>02 · Assess</strong><p>Agree scope and review controls using authorised access.</p></div>
+        <div class="step"><strong>03 · Prioritise</strong><p>Separate urgent risks from longer-term improvements.</p></div>
+        <div class="step"><strong>04 · Implement</strong><p>Deliver approved changes with appropriate change control.</p></div>
+        <div class="step"><strong>05 · Review</strong><p>Document outcomes, actions and next steps.</p></div>
+      </div>
+    </div>
+  </section>
 
-</section>
-
-<section id="services">
-
-<h2 class="section-title">Our Services</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Managed Security</h3>
-<p>24/7 threat monitoring and cybersecurity operations for your business environment.</p>
-</div>
-
-<div class="card">
-<h3>Penetration Testing</h3>
-<p>Simulated cyber attacks to identify weaknesses before attackers do.</p>
-</div>
-
-<div class="card">
-<h3>Cloud Security</h3>
-<p>Secure your cloud infrastructure, applications, and remote workforce.</p>
-</div>
-
-<div class="card">
-<h3>Compliance & Risk</h3>
-<p>POPIA, ISO 27001, and governance support tailored for South African businesses.</p>
-</div>
-
-<div class="card">
-<h3>Incident Response</h3>
-<p>Rapid containment and recovery support during cyber incidents and breaches.</p>
-</div>
-
-<div class="card">
-<h3>Security Awareness</h3>
-<p>Train employees against phishing, ransomware, and social engineering attacks.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="about">
-
-<h2 class="section-title">Why Businesses Trust Us</h2>
-
-<div class="stats">
-
-<div class="stat">
-<h2>24/7</h2>
-<p>Threat Monitoring</p>
-</div>
-
-<div class="stat">
-<h2>99%</h2>
-<p>Incident Detection Rate</p>
-</div>
-
-<div class="stat">
-<h2>100+</h2>
-<p>Security Assessments</p>
-</div>
-
-<div class="stat">
-<h2>Fast</h2>
-<p>Response Times</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="pricing">
-
-<h2 class="section-title">Security Packages</h2>
-
-<div class="pricing">
-
-<div class="price-card">
-<h3>Starter</h3>
-<div class="price">R4,999</div>
-
-<ul>
-<li>Basic Security Monitoring</li>
-<li>Email Protection</li>
-<li>Monthly Reports</li>
-<li>Business Support</li>
-</ul>
-
-<a href="#contact" class="btn primary">Get Started</a>
-</div>
-
-<div class="price-card">
-<h3>Professional</h3>
-<div class="price">R12,999</div>
-
-<ul>
-<li>Advanced Threat Detection</li>
-<li>Penetration Testing</li>
-<li>Cloud Security</li>
-<li>24/7 Monitoring</li>
-</ul>
-
-<a href="#contact" class="btn primary">Choose Plan</a>
-</div>
-
-<div class="price-card">
-<h3>Enterprise</h3>
-<div class="price">Custom</div>
-
-<ul>
-<li>Dedicated Security Team</li>
-<li>Compliance Management</li>
-<li>Incident Response</li>
-<li>Tailored Solutions</li>
-</ul>
-
-<a href="#contact" class="btn primary">Contact Us</a>
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2 class="section-title">Let's Secure Your Business</h2>
-
-<div class="contact-box">
-<p>Email: <a href="mailto:info@bogolobaneocyber.com">info@bogolobaneocyber.com</a></p>
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Email Address">
-<input type="text" placeholder="Company Name">
-<textarea rows="6" placeholder="Tell us about your cybersecurity needs"></textarea>
-<button type="submit">Request Consultation</button>
-</form>
-
-</div>
-
-</section>
-
+  <section class="band" id="contact">
+    <div class="wrap">
+      <div class="cta" style="margin-bottom:30px">
+        <div><h2>Let’s secure your business.</h2><p>Tell us what you need. We’ll discuss the scope and prepare a tailored quotation.</p></div>
+        <a class="btn primary" href="https://wa.me/27825120368?text=Hi%20Bogolo%20Ba%20Neo%2C%20I%27d%20like%20a%20cybersecurity%20consultation." target="_blank" rel="noopener">Start on WhatsApp ↗</a>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3>Contact Bogolo Ba Neo</h3>
+          <p>Cybersecurity. Secured Future.</p>
+          <div class="contact-item"><strong>Phone / WhatsApp</strong><br><a href="tel:+27825120368">082 512 0368</a> · <a href="https://wa.me/27825120368" target="_blank" rel="noopener">WhatsApp us</a></div>
+          <div class="contact-item"><strong>Email</strong><br><a href="mailto:info@bogolobaneocyber.com">info@bogolobaneocyber.com</a></div>
+          <div class="contact-item"><strong>Website</strong><br><a href="https://bogolobaneocyber.com">bogolobaneocyber.com</a></div>
+          <p class="form-help" style="color:#c6dce8">We support South African businesses with remote and agreed on-site engagements.</p>
+        </div>
+        <form class="contact-form" id="quoteForm">
+          <h3>Request a consultation</h3>
+          <p class="form-help">This form opens your email app with your request ready to send. No backend or paid form service required.</p>
+          <div class="field"><label for="name">Your name</label><input id="name" name="name" required autocomplete="name" placeholder="Full name"></div>
+          <div class="field"><label for="company">Company</label><input id="company" name="company" autocomplete="organization" placeholder="Business name"></div>
+          <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="you@company.co.za"></div>
+          <div class="field"><label for="service">Service of interest</label><select id="service" name="service"><option>Cybersecurity Health Check</option><option>Microsoft 365 Security Review</option><option>Vulnerability Assessment</option><option>Network Security Assessment</option><option>POPIA Security Gap Assessment</option><option>Cybersecurity Policy Starter Pack</option><option>Staff Cyber Awareness Training</option><option>Incident Response Consultation</option><option>Security Hardening Project</option><option>Monthly Support Package</option><option>CCTV / Access Control / Network Security</option><option>Not sure yet — please advise</option></select></div>
+          <div class="field"><label for="message">What would you like help with?</label><textarea id="message" name="message" placeholder="Briefly describe your needs"></textarea></div>
+          <button class="btn primary" type="submit">Prepare email enquiry ↗</button>
+          <p id="formStatus" class="form-help" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
 <footer>
-© 2026 Bogolo ba Neo Cybersecurity Solutions
+  <div class="wrap foot"><div><strong>BOGOLO BA NEO CYBERSECURITY SOLUTIONS</strong><br>Protect · Secure · Empower</div><div>© <span id="year">2026</span> Bogolo Ba Neo Cybersecurity Solutions. All rights reserved.</div><div><a href="#home">Back to top ↑</a></div></div>
 </footer>
-
-<a class="whatsapp" href="https://wa.me/27825120368" target="_blank">WhatsApp</a>
-
+<div class="mobile-cta"><a class="btn primary" href="https://wa.me/27825120368?text=Hi%2C%20I%27d%20like%20a%20cybersecurity%20consultation." target="_blank" rel="noopener">WhatsApp</a><a class="btn outline" style="background:#06182b" href="mailto:info@bogolobaneocyber.com">Email</a></div>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('quoteForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const v = id => document.getElementById(id).value.trim();
+    const subject = encodeURIComponent('Cybersecurity enquiry — ' + v('service'));
+    const body = encodeURIComponent(
+      'Hello Bogolo Ba Neo Cybersecurity Solutions,\\n\\nI would like to request a consultation/quotation.\\n\\nName: ' + v('name') +
+      '\\nCompany: ' + v('company') + '\\nEmail: ' + v('email') + '\\nService: ' + v('service') +
+      '\\n\\nDetails: ' + v('message') + '\\n\\nKind regards,\\n' + v('name')
+    );
+    document.getElementById('formStatus').textContent = 'Opening your email app. Please review and send the message to complete your enquiry.';
+    window.location.href = 'mailto:info@bogolobaneocyber.com?subject=' + subject + '&body=' + body;
+  });
+</script>
 </body>
 </html>
